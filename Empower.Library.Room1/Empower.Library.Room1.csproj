@@ -20,6 +20,7 @@
 			Empower Demo - Library that allows an order to be placed on DataMiner solutions.skyline.be.
 var order = OrderFactory.CreateOrder("Order 1");
 		</Description>
+		<RepositoryUrl>https://github.com/SkylineCommunications/Skyline.DataMiner.Empower.Library.Room1.git</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
