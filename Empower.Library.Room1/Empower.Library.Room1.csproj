@@ -31,6 +31,6 @@ var order = OrderFactory.CreateOrder("Order 1");
 
 	<ItemGroup>
 	  <PackageReference Include="Nito.AsyncEx" Version="5.1.2" />
-	  <PackageReference Include="Skyline.DataMiner.CICD.Tools.WinEncryptedKeys.Lib" Version="1.0.1-Beta1" />
+	  <PackageReference Include="Skyline.DataMiner.CICD.Tools.WinEncryptedKeys.Lib" Version="1.0.2" />
 	</ItemGroup>
 </Project>
