@@ -4,6 +4,7 @@
 
     using Skyline.DataMiner.CICD.Tools.WinEncryptedKeys.Lib;
 
+    using System;
     using System.Net;
     using System.Net.Http;
     using System.Net.Http.Headers;
@@ -30,7 +31,15 @@
         public Order(string orderValue)
         {
             // Key was setup using the dotnet tool Skyline.DataMiner.CICD.Tools.WinEncryptedKeys
-            apiKey = Keys.RetrieveKey(keyName);
+            try
+            {
+                apiKey = Keys.RetrieveKey(keyName);
+            }
+            catch (InvalidOperationException)
+            {
+                throw new InvalidOperationException("Unauthorized: To run this call you must deploy Package SetupOrderDispatcher https://catalog.dataminer.services/catalog/4276.");
+            }
+
             name = orderValue;
             suffix = " from room 'ABugFromRoom1'";
         }
